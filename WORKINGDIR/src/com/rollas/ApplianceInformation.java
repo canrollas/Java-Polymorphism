@@ -2,6 +2,13 @@ package com.rollas;
 
 public abstract class ApplianceInformation implements IApplianceInformation {
 	String id ; 
+	public ApplianceInformation() {
+		
+	}
+	public ApplianceInformation(String givenID) {
+		id = givenID;
+	}
+	
 	public String getID() {
 		return id;
 	}
