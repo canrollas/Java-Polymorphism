@@ -1,4 +1,4 @@
-package com.rci;
+package com.rollas;
 
 public abstract class ApplianceInformation implements IApplianceInformation {
 	String id ; 
