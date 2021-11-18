@@ -4,6 +4,10 @@ public class Photo extends ApplianceInformation{
     private String photo;
     private String resolution;
 
+    public Photo(String givenID) {
+        super(givenID);
+    }
+
     public String getResolution() {
         return resolution;
     }

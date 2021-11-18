@@ -5,6 +5,10 @@ public class Finance extends ApplianceInformation{
     int income;
     int savings;
 
+    public Finance(String givenID) {
+        super(givenID);
+    }
+
     public void setIncome(int income) {
         this.income = income;
     }

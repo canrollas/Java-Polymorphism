@@ -4,6 +4,10 @@ public class Passport extends ApplianceInformation{
     private String passportId;
     private String exDate;
 
+    public Passport(String givenID) {
+        super(givenID);
+    }
+
 
     public String getExDate() {
         return exDate;
