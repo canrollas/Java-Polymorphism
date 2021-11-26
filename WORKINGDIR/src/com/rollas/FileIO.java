@@ -3,7 +3,6 @@ package com.rollas;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Scanner;
 
 public class FileIO{
@@ -20,7 +19,7 @@ public class FileIO{
                 String[] emptyStringArray = data.split(",");
                 if (emptyStringArray[0].equals("S")){
                     Passport newPasport = new Passport(emptyStringArray[1]);
-                    newPasport.setPassportId(emptyStringArray[2]);
+                    newPasport.setPassaportNumber(emptyStringArray[2]);
                     newPasport.setExDate(emptyStringArray[3]);
                     passportObjects.add(newPasport);
                 }

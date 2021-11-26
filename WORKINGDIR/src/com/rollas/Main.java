@@ -1,7 +1,6 @@
 package com.rollas;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 
 public class Main {
 
@@ -10,7 +9,7 @@ public class Main {
 		System.out.println("Pasaport objelerinin bastırılması!!");
 		System.out.println("___________________________________");
 		for (Passport passportData:trialData){
-			System.out.println(passportData.getPassportId());
+			System.out.println(passportData.getPassaportNumber());
 			System.out.println(passportData.getExDate());
 			System.out.println("");
 		}
