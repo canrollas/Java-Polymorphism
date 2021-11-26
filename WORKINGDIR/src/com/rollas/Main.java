@@ -23,6 +23,7 @@ public class Main {
 		for (Finance financeData:trialData3){
 			System.out.println(financeData);
 		}
+		System.out.println(DateParser.getDiffrence("2027-03-21","2021-11-25"));
 
 	}
 
