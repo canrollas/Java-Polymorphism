@@ -24,4 +24,8 @@ public class Finance extends ApplianceInformation{
     public void setSavings(int savings) {
         this.savings = savings;
     }
+    public String  toString(){
+        String r  = "FINANCE\n" + super.toString() + " applicant income : " + getIncome() + " applicant savings : " + getSavings();
+        return r;
+    }
 }

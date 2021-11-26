@@ -1,7 +1,7 @@
 package com.rollas;
 public class Passport extends ApplianceInformation{
 
-    private String passportId;
+    private String passportNumber;
     private String exDate;
 
     public Passport(String givenID) {
@@ -17,16 +17,18 @@ public class Passport extends ApplianceInformation{
         this.exDate = exDate;
     }
 
-    public String getPassportId() {
-        return passportId;
+    public String getPassaportNumber() {
+        return passportNumber;
     }
 
-    public void setPassportId(String passportId) {
-        this.passportId = passportId;
+    public void setPassaportNumber(String passportId) {
+        this.passportNumber = passportId;
     }
 
     public String toString() {
-        String r = "PASSPORT\n" + super.toString() + " passportNumber : " + getPassportId()
+        String r = "PASSPORT\n" + super.toString() + " passportNumber : " + getPassaportNumber() + " expiration date : " + getExDate();
+        return r;
+
 
     }
 }

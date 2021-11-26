@@ -23,4 +23,8 @@ public class Photo extends ApplianceInformation{
     public void setPhoto(String photo) {
         this.photo = photo;
     }
+    public String toString(){
+        String r = "PHOTO\n" + super.toString() + " resolution : " + getResolution() + " position : " + getPhoto();
+        return r;
+    }
 }

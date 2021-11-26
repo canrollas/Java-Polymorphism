@@ -9,25 +9,19 @@ public class Main {
 		System.out.println("Pasaport objelerinin bastırılması!!");
 		System.out.println("___________________________________");
 		for (Passport passportData:trialData){
-			System.out.println(passportData.getPassaportNumber());
-			System.out.println(passportData.getExDate());
-			System.out.println("");
+			System.out.println(passportData);
 		}
 		ArrayList<Photo> trialData2 = FileIO.getPhoto();
 		System.out.println("Fotograf objelerinin bastırılması!!");
 		System.out.println("___________________________________");
 		for (Photo photoData:trialData2){
-			System.out.println(photoData.getResolution());
-			System.out.println(photoData.getPhoto());
-			System.out.println("");
+			System.out.println(photoData);
 		}
 		ArrayList<Finance> trialData3 = FileIO.getStatus();
 		System.out.println("Finans  objelerinin bastırılması!!");
 		System.out.println("___________________________________");
 		for (Finance financeData:trialData3){
-			System.out.println(financeData.getIncome()+"$");
-			System.out.println(financeData.getSavings()+"$");
-			System.out.println("");
+			System.out.println(financeData);
 		}
 
 	}
