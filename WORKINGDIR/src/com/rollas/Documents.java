@@ -1,11 +1,10 @@
 package com.rollas;
 
-public abstract class Documents implements IApplianceInformation {
-    String id;
+public abstract class Documents extends ApplianceInformation{
     String doc;
 
     public Documents(String givenID,String document) {
-        id = givenID;
+        super(givenID);
         doc = document;
     }
 

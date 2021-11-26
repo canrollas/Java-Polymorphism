@@ -28,5 +28,8 @@ public abstract class ApplianceInformation implements IApplianceInformation {
 		return false;
 		
 	}
+	public String toString(){
+		return "applicant id : " + id;
+	}
 
 }
