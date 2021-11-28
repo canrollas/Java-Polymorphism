@@ -1,37 +1,39 @@
 package com.rollas;
 
-public abstract class Documents extends ApplianceInformation{
-    String doc;
 
-    public Documents(String givenID,String document) {
+import java.util.ArrayList;
+
+public class Documents extends ApplianceInformation{
+    ArrayList<String> doc = new ArrayList<>();
+    private int exDate = 0;
+    public Documents(String givenID) {
         super(givenID);
-        doc = document;
     }
 
-    public String getDocumentType() {
+    public int getExDate() {
+        return exDate;
+    }
+
+    public void setExDate(int exDate) {
+        this.exDate = exDate;
+    }
+
+    public ArrayList<String> getDocumentType() {
         return doc;
     }
-
+    public void addDoc(String docType){
+        doc.add(docType);
+    }
     public String getID() {
         return id;
     }
 
-    public boolean belongsSameApplicant(Object other) {
-        if (other == null) {
-            System.out.println("error : argument object is null");
 
-            System.exit(-1);
-
-        } else {
-            if (other instanceof IApplianceInformation) {
-                IApplianceInformation temp = (IApplianceInformation) other;
-                return temp.getID() == this.getID();
-            } else {
-                System.out.println("argument object is not same type with calling object. Argument object's type is : " + other.getClass());
-                System.exit(-1);
-            }
-        }
-        return false;
-
+    @Override
+    public String toString() {
+        return "Documents {" +
+                "doc='" + doc + '\'' +
+                "id='" + super.getID() + '\'' +
+                '}';
     }
 }

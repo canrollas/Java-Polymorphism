@@ -29,6 +29,5 @@ public class Passport extends ApplianceInformation{
         String r = "PASSPORT\n" + super.toString() + " passportNumber : " + getPassaportNumber() + " expiration date : " + getExDate();
         return r;
 
-
     }
 }
