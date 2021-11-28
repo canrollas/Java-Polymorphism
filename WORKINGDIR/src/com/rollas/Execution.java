@@ -2,6 +2,7 @@ package com.rollas;
 
 import java.text.ParseException;
 import java.util.ArrayList;
+import java.util.Collections;
 
 public class Execution {
     ArrayList<Passport> trialData = FileIO.getPassport();
@@ -9,16 +10,19 @@ public class Execution {
     ArrayList<Finance> trialData3 = FileIO.getStatus();
     ArrayList<Documents> trialData4 = FileIO.getDocuments();
     ArrayList<String> personlist = FileIO.getIDList();
+
     Passport pass;
     Photo photo;
     Finance finance;
     Documents document;
-    ArrayList<Application> lister = new ArrayList<>();
-
-
+    ArrayList<Tourist> touristObjects = new ArrayList<>();
+    ArrayList<Immigrant> immigrantObjects = new ArrayList<>();
+    ArrayList<Student> studentObjects = new ArrayList<>();
+    ArrayList<Worker> workerObjects = new ArrayList<>();
     public Execution() throws ParseException {
-
+        Collections.sort(personlist);
         for (String person : personlist) {
+
 
             for (Passport passportData : trialData) {
                 if (passportData.getID().equals(person)) {
@@ -62,13 +66,43 @@ public class Execution {
                 pass.setExDate("");
 
             }
-            String nameOfApplicant = FileIO.getNameFromId(pass.getID());
-            Application dat = new Application(pass,photo,finance,document,nameOfApplicant);
-            lister.add(dat);
+            if (person.startsWith("11")){
+                String nameOfApplicant = FileIO.getNameFromId(pass.getID());
+                Tourist dat = new Tourist(pass,photo,finance,document,nameOfApplicant);
+                touristObjects.add(dat);
+            }
+            if (person.startsWith("30")){
+                String nameOfApplicant = FileIO.getNameFromId(pass.getID());
+                Immigrant dat = new Immigrant(pass,photo,finance,document,nameOfApplicant);
+                immigrantObjects.add(dat);
+            }
+            if (person.startsWith("25")){
+                String nameOfApplicant = FileIO.getNameFromId(pass.getID());
+                Student dat = new Student(pass,photo,finance,document,nameOfApplicant);
+                studentObjects.add(dat);
+            }
+            if (person.startsWith("23")){
+                String nameOfApplicant = FileIO.getNameFromId(pass.getID());
+                Worker dat = new Worker(pass,photo,finance,document,nameOfApplicant);
+                workerObjects.add(dat);
+            }
+
+
+
         }
-        for (Application genlis:lister){
+        for (Tourist genlis: touristObjects){
             genlis.printStatus();
         }
+        for (Worker genlis: workerObjects){
+            genlis.printStatus();
+        }
+        for (Student genlis: studentObjects){
+            genlis.printStatus();
+        }
+        for (Immigrant genlis: immigrantObjects){
+            genlis.printStatus();
+        }
+
     }
 
 
