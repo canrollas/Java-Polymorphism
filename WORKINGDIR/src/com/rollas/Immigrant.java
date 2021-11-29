@@ -47,14 +47,14 @@ public class Immigrant extends Application {
         } else if (!checkPassportExDate()) {
             return "Passport expiration date is not valid";
         }
-        if (pht.getPhoto().equals("") || pht.getResolution().equals("")) {
+        else if (pht.getPhoto().equals("") || pht.getResolution().equals("")) {
             return "Applicant does not have a photo";
         } else if (!checkPhotoRes()) {
             return "Resolution of photo is not valid";
         } else if (!checkPhotoPosition()) {
             return "Position in the photo is not valid";
         }
-        if (fnc.getIncome() == -1 || fnc.getSavings() == -1) {
+        else if (fnc.getIncome() == -1 || fnc.getSavings() == -1) {
             return "Applicant does not have a financial status report";
         } else if (!checkFinance()) {
             return "Applicant does not have a stable financial status";

@@ -10,7 +10,7 @@ public class FileIO {
     public static ArrayList<Passport> getPassport() {
         ArrayList<Passport> passportObjects = new ArrayList<>();
         try {
-            File myObj = new File("WORKINGDIR/src/com/rollas/HW2_ApplicantsInfo.csv");
+            File myObj = new File("src/com/rollas/HW2_ApplicantsInfo.csv");
             // Scanner object init
             Scanner myReader = new Scanner(myObj);
             // Looping over the lines with boolean condition if reader object has next line to iterate.
@@ -39,7 +39,7 @@ public class FileIO {
     public static ArrayList<Photo> getPhoto() {
         ArrayList<Photo> photoObjects = new ArrayList<>();
         try {
-            File myObj = new File("WORKINGDIR/src/com/rollas/HW2_ApplicantsInfo.csv");
+            File myObj = new File("src/com/rollas/HW2_ApplicantsInfo.csv");
             // Scanner object init
             Scanner myReader = new Scanner(myObj);
             // Looping over the lines with boolean condition if reader object has next line to iterate.
@@ -69,7 +69,7 @@ public class FileIO {
     public static ArrayList<Finance> getStatus() {
         ArrayList<Finance> financeObjects = new ArrayList<>();
         try {
-            File myObj = new File("WORKINGDIR/src/com/rollas/HW2_ApplicantsInfo.csv");
+            File myObj = new File("src/com/rollas/HW2_ApplicantsInfo.csv");
             // Scanner object init
             Scanner myReader = new Scanner(myObj);
             // Looping over the lines with boolean condition if reader object has next line to iterate.
@@ -99,7 +99,7 @@ public class FileIO {
     public static ArrayList<Documents> getDocuments() {
         ArrayList<Documents> documentsObjects = new ArrayList<>();
         try {
-            File myObj = new File("WORKINGDIR/src/com/rollas/HW2_ApplicantsInfo.csv");
+            File myObj = new File("src/com/rollas/HW2_ApplicantsInfo.csv");
             // Scanner object init
 
             // Looping over the lines with boolean condition if reader object has next line to iterate.
@@ -133,7 +133,7 @@ public class FileIO {
     public static ArrayList<String> getIDList() {
         ArrayList<String> idList = new ArrayList<>();
         try {
-            File myObj = new File("WORKINGDIR/src/com/rollas/HW2_ApplicantsInfo.csv");
+            File myObj = new File("src/com/rollas/HW2_ApplicantsInfo.csv");
             // Scanner object init
             Scanner myReader = new Scanner(myObj);
             // Looping over the lines with boolean condition if reader object has next line to iterate.
@@ -158,7 +158,7 @@ public class FileIO {
     }
     public static String getNameFromId(String id){
         try {
-            File myObj = new File("WORKINGDIR/src/com/rollas/HW2_ApplicantsInfo.csv");
+            File myObj = new File("src/com/rollas/HW2_ApplicantsInfo.csv");
             // Scanner object init
             Scanner myReader = new Scanner(myObj);
             // Looping over the lines with boolean condition if reader object has next line to iterate.
